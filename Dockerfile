@@ -19,7 +19,7 @@ RUN apk -U add autoconf automake py2-virtualenv \
 		libtool gcc g++ bison flex \
 		openssl-dev ragel boost-dev make \
 		py2-virtualenv sqlite-dev && \
-	apk add libcrypto1.0 libgcc libstdc++ sqlite-libs && \
+	apk add libcrypto1.0 libgcc libstdc++ sqlite-libs boost-program_options && \
 	rm -rf ~/* && rm -rf /opt/pdns/bin/zone2*
 
 CMD /opt/pdns/sbin/pdns_server
