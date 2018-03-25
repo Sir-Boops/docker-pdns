@@ -2,9 +2,6 @@ FROM alpine:3.7
 
 ARG PDNS_VER="4.1.1"
 
-RUN addgroup -S pdns && \
-	adduser -S -G pdns pdns
-
 RUN apk -U add autoconf automake py2-virtualenv \
 		git libtool gcc g++ bison flex \
 		openssl-dev ragel boost-dev make sqlite-dev && \
