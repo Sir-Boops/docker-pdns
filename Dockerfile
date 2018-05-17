@@ -20,3 +20,5 @@ RUN apk -U add --virtual deps \
     apk del --purge deps && \
     rm -rf ~/* && \
     rm -rf /opt/pdns/bin/zone2*
+
+CMD /opt/pdns/sbin/pdns_server
