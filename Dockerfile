@@ -13,7 +13,6 @@ RUN apk -U add --virtual deps \
 	git clone https://github.com/PowerDNS/pdns && \
 	cd pdns && \
 	git checkout tags/auth-$PDNS_VER && \
-	exit 0 && \
     ./bootstrap && \
     ./configure --prefix=/opt/pdns \
         --with-modules="gsqlite3 bind" && \
