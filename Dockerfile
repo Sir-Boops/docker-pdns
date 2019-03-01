@@ -1,4 +1,4 @@
-FROM alpine:3.8
+FROM alpine:3.9
 
 ARG PDNS_VER="4.1.6"
 
@@ -22,4 +22,4 @@ RUN apk -U add --virtual deps \
     rm -rf ~/* && \
     rm -rf /opt/pdns/bin/zone2*
 
-CMD /opt/pdns/sbin/pdns_server
+CMD /opt/pdns/sbin/pdns_server --disable-syslog --daemon=no
