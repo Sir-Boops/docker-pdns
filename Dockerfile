@@ -22,4 +22,5 @@ RUN apk -U add --virtual deps \
     rm -rf ~/* && \
     rm -rf /opt/pdns/bin/zone2*
 
-CMD /opt/pdns/sbin/pdns_server --disable-syslog --daemon=no
+ENV PATH=${PATH}:/opt/pdns/sbin:/opt/pdns/bin
+CMD pdns_server --disable-syslog --daemon=no
