@@ -3,7 +3,7 @@ FROM alpine:3.9
 ARG PDNS_VER="4.1.6"
 
 RUN apk -U add --virtual deps \
-        autoconf automake py-virtualenv \
+        autoconf automake py3-virtualenv \
         git libtool gcc g++ bison flex \
         libressl-dev ragel boost-dev make \
         sqlite-dev yaml-cpp-dev && \
