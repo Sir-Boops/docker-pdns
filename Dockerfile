@@ -3,11 +3,11 @@ FROM alpine:3.9
 ARG PDNS_VER="4.1.6"
 
 RUN apk -U add --virtual deps \
-        autoconf automake py2-virtualenv \
+        autoconf automake py-virtualenv \
         git libtool gcc g++ bison flex \
-        openssl-dev ragel boost-dev make \
+        libressl-dev ragel boost-dev make \
         sqlite-dev yaml-cpp-dev && \
-    apk add libcrypto1.0 libgcc libstdc++ \
+    apk add libressl libgcc libstdc++ \
         yaml-cpp sqlite-libs boost-program_options && \
     cd ~ && \
 	git clone https://github.com/PowerDNS/pdns && \
